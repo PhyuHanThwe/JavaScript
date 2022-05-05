@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin-top: 200px;
+            text-align: center;
+        }
+        fieldset{
+            display: inline-block;
+            
+            /* margin-left: 200px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="" id="controlForm">
+            <fieldset>
+                <legend id="" style="text-align: center;">Text Control</legend>
+
+                <label for="text" >Text</label>
+                <input type="text" id="text">
+    
+                <label for="color">Color</label>
+                <input type="color" id="color">
+    
+                <label for="fontSize">Font Size</label>
+                <input type="range" id="fontSize" value="10">
+    
+                <label for="fontStyle">Font Style</label>
+                <select name="fontStyle" id="fontStyle">
+                    <option value="Arial">Arial</option>
+                    <option value="Gigi Regular">Gigi Regular</option>
+                    <option value="Georgia">Georgia</option>
+                </select>
+
+                <button >Run</button>
+
+            </fieldset>
+            <p id="output">Test</p>
+        </div>
+        </form>
+
+    <script>
+        let text = document.getElementById("text");
+        let color = document.querySelector("#color");
+        let fontSize = document.querySelector("#fontSize");
+        let fontStyle = document.querySelector("#fontStyle");
+        let output = document.querySelector("#output");
+        let form = document.getElementById("controlForm");
+
+        document.getElementById("controlForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            output.innerText = text.value;
+            output.style.color = color.value;
+            output.style.fontSize = fontSize.value+"px";
+            output.style.fontStyle = fontStyle.value;
+            this.reset();
+        });
+
+        // name.addEventListener("keyup",function(){
+        //     output.innerText = this.value;
+        //     // this.rest()
+        // });
+
+        // color.addEventListener("change", function(){
+        //     output.style.color = this.value
+        // });
+
+        // fontSize.addEventListener("change", function(){
+        //     output.style.fontSize = this.value+"px"
+        // });
+
+        // fontStyle.addEventListener("change",function(){
+        //     output.style.fontFamily = this.value
+        // });
+
+        
+
+    </script>
+</body>
+</html>

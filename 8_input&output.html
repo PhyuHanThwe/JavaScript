@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">Min Ga Lar Par</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos veritatis maxime facere delectus quisquam a cum ducimus, vero ipsum repellat saepe iusto assumenda! Voluptatem dignissimos harum magnam! Expedita, dolores harum?</p>
+    <p>This is lorem</p>
+    <input type="text" id="Text">
+    <button onclick="changeHeader()">click me</button>
+    <script>
+
+        let h = document.getElementById("header")
+        let i = document.getElementById("Text")
+
+        function changeHeader(){
+            h.innerText = i.value
+        }
+        
+        // let h = document.getElementById("header");
+        // let i = document.getElementById("innerText")
+
+        // function changeHeader(){
+        //     let inputText = i.value;
+        //     h.innerText = inputText
+        // }
+        // let name = window.prompt("what's up?")
+        // window.alert(name)
+        // console.log(name)
+        // let ques = window.confirm("have u eatten?")
+        // document.write(`<h1> ${ques ? "yes" : "no"}</h1>`)
+
+
+        // let inputText = prompt("Testing")
+        // document.getElementById("header").innerText=inputText
+
+        
+
+    </script>
+</body>
+</html>

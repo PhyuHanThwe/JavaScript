@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #test{
+            height: 300px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head">Dom သင်ခန်းစာ</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi necessitatibus dolorum numquam dicta accusamus qui nesciunt alias commodi magnam. Saepe corrupti quas quis aut voluptatibus ex vel nemo assumenda corporis.</p>
+
+    <a href="https://www.facebook.com">Facebook</a>
+    
+    <img src="../LearnHTML/assets/poe.jpg" alt="poe" style="height: 150px;">
+    <hr>
+
+    <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li id="cc">mango</li>
+    </ul><hr>
+
+    <ol>
+        <li>agag</li>
+        <li class="aa">zawzaw</li>
+        <li>kywkyw</li>
+    </ol><hr>
+
+    <form action="" id="test">
+        <fieldset>
+            <legend id="formName">Form</legend>
+            <div>
+                <label for="">Name</label><br><br>
+                <input type="text" id="name">
+            </div>
+            <br>
+            <div>
+                <label for="">Phone Number</label><br><br>
+                <input type="number" name="number" id="ph_no">
+            </div>
+            <br>
+            <div>
+                <label for="">Weight</label>
+                <input type="number" id="weight">
+            </div>
+            <br>
+            <div>
+                <label for="">Date of Birth</label>
+                <input type="date" id="dob">
+            </div>
+            <br>
+            <div>
+                <label for="">Photo</label>
+                <input type="file" name="photo[]" id="photo" multiple>
+            </div>
+            <br>
+            <div>
+                <label for="">Country</label>
+                <select name="country" id="country">
+                    <option value="mm">Myanmar</option>
+                    <option value="kr">Korea</option>
+                    <option value="jp">Japan</option>
+                </select>
+            </div>
+            <br>
+            <input type="button" value="Submit" onclick="nameChg()">
+        </fieldset>
+    </form>
+    
+    <script>
+
+        // let a = document.getElementById("head");
+        // let b = document.getElementById("name");
+
+        // function nameChg(){
+        //     a.innerText = b.value
+        }
+
+    </script>
+</body>
+</html>

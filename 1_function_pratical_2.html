@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let record = [];
+        let index = 0;
+
+        function saveRecord(w,h,r){
+            record[index] = {
+                width : w,
+                height : h,
+                result : r
+            }
+            index++
+        }
+
+        function calcArea(width,height){
+            let calc = width * height;
+            let result = calc + " sqft";  
+            saveRecord(width,height,result);       
+            return result;
+        }
+
+        let rates = {
+            usd : 1758,
+            eur : 1965,
+            sgd : 1230
+        }
+        let recordETM = [];
+        let i = 0;
+
+        function saveRecordETM(a,c,t){
+            recordETM[i] = {
+                amount : a,
+                currency : c,
+                total : t
+            }
+            i++
+        }
+
+        function exchangeToMMK(amount, currency){
+            let calc = amount * rates[currency];
+            let total = calc + " MMk";
+            saveRecordETM(amount,currency,total);
+            return total
+        }
+
+        function exchangeFromMMK (amount, currency){
+            let calc = amount / rates[currency];
+            let total = calc + " rates[currency] ";
+            saveRecordETM(amount,currency,total);
+            return total
+        }
+
+        let fruitPrice = {
+            orange : 100, 
+            apple : 150,
+            mango : 200
+        }
+
+        function calcTax(amount,percentage=5){
+            return (amount*percentage)/100;    
+        }
+
+        function calcTotal (amount, fruit){
+            let calc = amount * fruitPrice[fruit];
+            let total = calc + " mmk";
+            return {
+                name : fruit,
+                unitprice : fruitPrice[fruit],
+                cost : calc,
+                tax : calcTax(calc),
+                total : calc + calcTax(calc)
+            }
+        }
+
+    </script>
+</body>
+</html>

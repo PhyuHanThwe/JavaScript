@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">First Number</label>
+        <br>
+        <input type="number" id="a">
+    </div>
+    <div>
+        <label for="">Second Number</label>
+        <br>
+        <input type="number" id="b">
+    </div>
+    <div>
+        <!-- <p>result:</p><span id="result"></span> -->
+        <p>Result: <span id="result"></span></p>
+        <input type="button" value="Calculate" onclick="Calc()">
+        <button onclick="Store()">store</button>
+    </div>
+
+    <ul id="c"></ul>
+
+    <script>
+
+        let a = document.getElementById("a");
+        let b = document.getElementById("b");
+        let r = document.getElementById("result");
+        let c = document.getElementById("c");
+
+
+        function Calc(){
+            if(a.value == "" || b.value ==""){
+                alert("fil the values")
+            }
+            else{
+                r.innerHTML = Number(a.value) + b.valueAsNumber;
+                a.value = b.value = ""
+            }
+        }
+
+        function Store(){
+            if(r.innerHTML == ""){
+                alert("result is empty");
+            }
+            else{
+                c.innerHTML += `<li>${r.innerHTML}</li>`;
+            };
+
+            r.innerHTML = ""
+            
+        }
+
+
+
+    </script>
+</body>
+</html>

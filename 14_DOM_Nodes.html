@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>orange</li>
+    </ul>
+    <script>
+
+        let body = document.body;
+
+        let li = document.createElement("li")
+        li.innerText = "apple";
+        document.querySelector("ul").append(li)
+
+        let li1 = document.createElement("li");
+        let textOfLi = document.createTextNode("mango");
+        li1.append(textOfLi)
+        document.querySelector("ul").prepend(li1)
+
+        let h1 = document.createElement("h2");
+        h1.innerText = "San Kyi Tr";
+        body.append(h1);
+
+        let p = document.createElement("p");
+        let text = document.createTextNode("I'm p");
+        p.append(text);
+        body.append(p)
+
+        let p1 = document.createElement("p");
+        let text1 = document.createTextNode("I'm p1");
+        p1.append(text1);
+        body.append(p1)
+        
+        let h = document.createElement("h1");
+        let text2 = document.createTextNode("I'm h1");
+        h.append(text2);
+        body.append(h)
+        
+    </script>
+</body>
+</html>
